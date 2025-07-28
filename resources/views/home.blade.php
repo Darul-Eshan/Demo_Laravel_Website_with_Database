@@ -7,8 +7,16 @@
     <section class="py-5 bg-danger-subtle">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1 class="display-4 text-center text-white">Welcome to home</h1>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{asset('/')}}img/1.jpg" alt=""/>
+                        <div class="card-body">
+                            <h4>New T -Shirt</h4>
+                            <p>TK.4600</p>
+                            <hr/>
+                            <a href="" class="btn btn-success">Read More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
