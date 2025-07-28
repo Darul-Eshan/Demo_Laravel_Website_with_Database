@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('/')}}css/bootstrap.css">
+    <style>
+        .active{
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,28 +19,19 @@
         <a href="#" class="navbar-brand">Navbar</a>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a href="{{route('home')}}" class="nav-link">Home</a>
+                <a href="{{route('home')}}" class="nav-link {{\Request::route()->getName()=='home' ? 'active':''}}">Home</a>
             </li>
             <li class="nav-item">
-                <a href="{{route('about')}}" class="nav-link">About</a>
+                <a href="{{route('about')}}" class="nav-link {{\Request::route()->getName()=='about' ? 'active':''}}">About</a>
             </li>
             <li class="nav-item">
-                <a href="{{route('contact')}}" class="nav-link">Contact</a>
+                <a href="{{route('contact')}}" class="nav-link {{\Request::route()->getName()=='contact' ? 'active':''}}">Contact</a>
             </li>
 
         </ul>
     </div>
 </nav>
-<section class="py-5 bg-danger-subtle">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="display-4 text-center text-white">@yield('title')</h1>
-            </div>
-        </div>
-    </div>
-
-</section>
+@yield('content')
 <script src="{{asset('/')}}js/bootstrap.js"></script>
 </body>
 </html>
