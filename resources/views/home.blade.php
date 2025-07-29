@@ -7,17 +7,19 @@
     <section class="py-5 bg-danger-subtle">
         <div class="container">
             <div class="row">
+                @foreach($products as $product)
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="{{asset('/')}}img/1.jpg" alt=""/>
+                        <img src="{{asset($product['image'])}}" alt=""/>
                         <div class="card-body">
-                            <h4>New T -Shirt</h4>
-                            <p>TK.4600</p>
+                            <h4>{{$product['name']}}</h4>
+                            <p>{{$product['price']}}</p>
                             <hr/>
                             <a href="" class="btn btn-success">Read More</a>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
 

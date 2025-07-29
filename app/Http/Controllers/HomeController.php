@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    private $products;
     public function index(){
-        return view('home');
+        $this->products = Product::getAllProduct();
+        return view('home',['products'=>$this->products]);
     }
     public function about(){
         return view('about');

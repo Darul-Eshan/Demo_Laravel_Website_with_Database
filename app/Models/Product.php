@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    private $products =[
+    private static $products =[
         0 => [
             'id' => 1,
             'name' => 'Product 1',
@@ -33,4 +33,7 @@ class Product extends Model
             'description' => 'Product 4 description',],
 
     ];
-}
+    public static function getAllProduct(){
+        return self::$products;
+          }
+    }
