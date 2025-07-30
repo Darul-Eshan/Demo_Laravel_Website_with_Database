@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 Route::get('/',[HomeController::class,'index'])->name('home');;
- Route::get('/about',[HomeController::class,'about'])->name('about');
- Route::get('/contact',[HomeController::class,'contact'])->name('contact');
-Route::get('/details',[HomeController::class,'details'])->name('details');
+Route::get('/about',[HomeController::class,'about'])->name('about');
+Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::get('/details/{id}',[HomeController::class,'details'])->name('details');
 

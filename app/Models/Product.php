@@ -26,7 +26,7 @@ class Product extends Model
             "price" =>'2500',
             'image' => 'img/3.jpg',
             'description' => 'Product 3 description',],
-        3 => ['id' => 1,
+        3 => ['id' => 4,
             'name' => 'Product 4',
             "price" =>'2500',
             'image' => 'img/4.jpg',
@@ -35,5 +35,13 @@ class Product extends Model
     ];
     public static function getAllProduct(){
         return self::$products;
+          }
+          public static function getProductById($id)
+          {
+              foreach(self::$products as $product){
+                  if ($product['id'] == $id){
+                      return $product;
+                  }
+              }
           }
     }
