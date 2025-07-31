@@ -7,14 +7,14 @@
         <div class="row">
             <div class="col-md-6">
               <div class="card card-body">
-                  <img src="{{asset('/')}}img/1.jpg">
+                  <img src="{{asset($product['image'])}}" alt="">
               </div>
             </div>
             <div class="col-md-6">
                 <div class="card card-body">
-                    <h1>This is Product name</h1>
-                    <h3>tk.2234</h3>
-                    <p>fgshjgfhjf</p>
+                    <h1>{{$product['name']}}</h1>
+                    <h3>{{$product['price']}}</h3>
+                    <p>{{$product['description']}}</p>
                 </div>
             </div>
         </div>

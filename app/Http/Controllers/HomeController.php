@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    private $products;
+    private $products,$product;
     public function index(){
         $this->products = Product::getAllProduct();
         return view('home',['products'=>$this->products]);
@@ -19,8 +19,14 @@ class HomeController extends Controller
         return view('contact');
     }
     public function details($id){
-        return view('details');
+        $this->product=Product::getProductById($id);
+        return view('details',['product'=>$this->product]);
     }
+    public function makeFullName()
+    {
+        return "hello";
+    }
+
 
 
 }
