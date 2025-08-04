@@ -27,6 +27,9 @@
             <li class="nav-item">
                 <a href="{{route('contact')}}" class="nav-link {{\Request::route()->getName()=='contact' ? 'active':''}}">Contact</a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('calculator.form')}}" class="nav-link {{\Request::route()->getName()=='calculator' ? 'active':''}}">Calculator</a>
+            </li>
 
         </ul>
     </div>

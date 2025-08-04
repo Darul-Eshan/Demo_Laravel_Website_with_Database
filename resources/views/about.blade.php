@@ -11,23 +11,24 @@
                   <div class="card">
                       <div class="card-header">Full Name Program</div>
                       <div class="card-body">
-                          <form action="" method="post">
+                          <form action="{{route('makeFullName')}}" method="post">
+                              @csrf
                               <div  class="row mb-3">
                                   <label class="col-md-3">First Name</label>
                                   <div class="col-md-9">
-                                      <input type="text" class="form-control" name="first_name">
+                                      <input type="text" class="form-control" value="{{session('first_name')}}" name="first_name">
                                   </div>
                               </div>
                               <div  class="row mb-3">
                                   <label class="col-md-3">Last Name</label>
                                   <div class="col-md-9">
-                                      <input type="text" class="form-control" name="last_name">
+                                      <input type="text" class="form-control" value="{{session('last_name')}}" name="last_name">
                                   </div>
                               </div>
                               <div  class="row mb-3">
                                   <label class="col-md-3">Full Name</label>
                                   <div class="col-md-9">
-                                      <input type="text" class="form-control" >
+                                      <input type="text" value="{{session('massage')}}" class="form-control" >
                                   </div>
                               </div>
                               <div  class="row mb-3">
