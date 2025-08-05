@@ -16,3 +16,4 @@ Route::post('/make-full-name',[HomeController::class,'makeFullName'])->name('mak
 Route::get('/calculator', [HomeController::class, 'showCalculatorForm'])->name('calculator.form');
 Route::post('/calculator',[HomeController::class,'calculator'])->name('calculator');
 Route::get('/add-product',[ProductController::class,'index'])->name('product.add');
+Route::post('/create-product',[ProductController::class,'create'])->name('product.create');

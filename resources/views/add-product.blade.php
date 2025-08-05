@@ -9,6 +9,8 @@
                     <div class="card">
                         <div class="card-header">Add Product</div>
                         <div class="card-body">
+                            <form action="{{route('product.create')}}" method="post">
+                                @csrf
                             <div class="row mb-3">
                                 <label class="col-md-3">Product Name</label>
                                 <div class="col-md-9">
@@ -39,6 +41,7 @@
                                     <input type="submit" class="btn btn-success" value="Create New Product">
                                 </div>
                             </div>
+                            </form>
                         </div>
                     </div>
                 </div>
