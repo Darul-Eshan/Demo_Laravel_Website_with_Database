@@ -30,6 +30,9 @@
             <li class="nav-item">
                 <a href="{{route('calculator.form')}}" class="nav-link {{\Request::route()->getName()=='calculator' ? 'active':''}}">Calculator</a>
             </li>
+            <lI>
+                <a href="{{route('product.add')}}" class="nav-link {{\Request::route()->getName()=='product.add' ? 'active':''}}">Add Product</a>
+            </lI>
 
         </ul>
     </div>
