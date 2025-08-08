@@ -9,7 +9,8 @@
                     <div class="card">
                         <div class="card-header">Add Product</div>
                         <div class="card-body">
-                            <form action="{{route('product.create')}}" method="post">
+                            <p class="text-success text-center">{{session('massage')}}</p>
+                            <form action="{{route('product.create')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                             <div class="row mb-3">
                                 <label class="col-md-3">Product Name</label>
@@ -32,7 +33,7 @@
                             <div class="row mb-3">
                                 <label class="col-md-3">Product Image</label>
                                 <div class="col-md-9">
-                                    <input type="file" class="form-control" name="Image">
+                                    <input type="file" class="form-control" name="image">
                                 </div>
                             </div>
                             <div class="row mb-3">

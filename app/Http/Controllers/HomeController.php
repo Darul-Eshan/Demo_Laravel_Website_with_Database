@@ -9,8 +9,8 @@ class HomeController extends Controller
 {
     private $products,$product,$fullName;
     public function index(){
-        $this->products = Product::getAllProduct();
-        return view('home',['products'=>$this->products]);
+//        $this->products = Product::getAllProduct();
+        return view('home');
     }
     public function about(){
         return view('about');

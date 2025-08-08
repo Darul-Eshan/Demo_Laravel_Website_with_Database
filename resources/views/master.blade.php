@@ -33,6 +33,9 @@
             <lI>
                 <a href="{{route('product.add')}}" class="nav-link {{\Request::route()->getName()=='product.add' ? 'active':''}}">Add Product</a>
             </lI>
+            <lI>
+                <a href="{{route('product.manage')}}" class="nav-link {{\Request::route()->getName()=='product.manage' ? 'active':''}}">Manage Product</a>
+            </lI>
 
         </ul>
     </div>
