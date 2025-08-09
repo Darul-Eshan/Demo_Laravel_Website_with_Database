@@ -26,9 +26,9 @@
                             <td>{{$product->name}}</td>
                             <td>{{$product->price}}</td>
                             <td>{{$product->description}}</td>
-                            <td><img src="{{$product->image}}" alt=""></td>
+                            <td><img src="{{$product->image}}" alt="" height="70" width="80"></td>
                             <td>
-                                <a href="" class="btn btn-success btn-sm">Edit</a>
+                                <a href="{{route('product.edit',['id'=>$product->id])}}" class="btn btn-success btn-sm">Edit</a>
                                 <a href="" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                                 </tr>

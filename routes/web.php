@@ -17,4 +17,6 @@ Route::get('/calculator', [HomeController::class, 'showCalculatorForm'])->name('
 Route::post('/calculator',[HomeController::class,'calculator'])->name('calculator');
 Route::get('/add-product',[ProductController::class,'index'])->name('product.add');
 Route::post('/create-product',[ProductController::class,'create'])->name('product.create');
-Route::get("/manage.product",[ProductController::class,'manage'])->name('product.manage');
+Route::get("/manage-product",[ProductController::class,'manage'])->name('product.manage');
+Route::get('/edit.product/{id}',[ProductController::class,'edit'])->name('product.edit');
+Route::post('/update-product/{id}',[ProductController::class,'update'])->name('product.update');
